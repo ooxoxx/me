@@ -7,15 +7,15 @@ import {
   ScrollRestoration,
   useLoaderData,
 } from "@remix-run/react";
-import clsx from "clsx";
+import { themeSessionResolver } from "./sessions.server";
+import { LoaderFunctionArgs } from "@remix-run/node";
 import {
   PreventFlashOnWrongTheme,
   ThemeProvider,
   useTheme,
 } from "remix-themes";
+import clsx from "clsx";
 
-import { themeSessionResolver } from "./sessions.server";
-import { LoaderFunctionArgs } from "@remix-run/node";
 import "~/tailwind.css";
 
 // Return the theme from the session storage using the loader
@@ -38,6 +38,7 @@ export default function AppWithProviders() {
 export function App() {
   const data = useLoaderData<typeof loader>();
   const [theme] = useTheme();
+
   return (
     <html lang="en" className={clsx(theme)}>
       <head>
