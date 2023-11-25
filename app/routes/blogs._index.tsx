@@ -34,7 +34,7 @@ export default function () {
       <ul>
         {posts.map(({ filepath, frontmatter }) => (
           <li key={filepath}>
-            <Link to={extractName(filepath)}>
+            <Link className="underline" to={extractName(filepath)}>
               <div>{frontmatter.meta.title}</div>
             </Link>
           </li>
