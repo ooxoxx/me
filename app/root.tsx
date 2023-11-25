@@ -52,7 +52,7 @@ export function App() {
         <header className="sticky top-0 flex justify-around items-center h-14 shadow bg-[background]/50 backdrop-blur backdrop-saturate-150 z-50">
           <div>I'm the header</div>
         </header>
-        <div className="h-[2000px]">
+        <div className="relative mx-auto max-w-screen-xl px-4 py-10 h-[2000px]">
           <Outlet />
         </div>
         <ScrollRestoration />
