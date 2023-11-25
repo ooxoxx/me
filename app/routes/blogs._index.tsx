@@ -23,7 +23,7 @@ export async function loader() {
 function extractName(path: string) {
   let re = /\.\/blogs\.(.*)\.mdx/g;
   let arr = re.exec(path);
-  if (!arr) throw new Error("invalid post file.");
+  if (!arr || arr.length !== 2) throw new Error("invalid post file.");
   return arr[1];
 }
 

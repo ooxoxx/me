@@ -1,4 +1,5 @@
 import type { MetaFunction } from "@remix-run/node";
+import ColoredEm from "~/components/colored-em";
 
 export const meta: MetaFunction = () => {
   return [
@@ -10,7 +11,10 @@ export const meta: MetaFunction = () => {
 export default function Index() {
   return (
     <div>
-      <h1 className="">Hi, there! I'm Leo lhr. This is my personal website.</h1>
+      <h1 className="">
+        Hi, there! I'm <ColoredEm>Leo lhr</ColoredEm>. This is my personal
+        website.
+      </h1>
     </div>
   );
 }
