@@ -40,7 +40,6 @@ export default function Index() {
       </ul>
       <div className="flex gap-2">
         <Button>Click Me</Button>
-        <ModeToggle />
       </div>
     </div>
   );
