@@ -17,7 +17,7 @@ import {
 import clsx from "clsx";
 
 import "~/tailwind.css";
-import { ModeToggle } from "./components/mode-toggle";
+import Header from "./components/header";
 
 // Return the theme from the session storage using the loader
 export async function loader({ request }: LoaderFunctionArgs) {
@@ -50,10 +50,7 @@ export function App() {
         <Links />
       </head>
       <body>
-        <header className="sticky top-0 flex justify-around items-center h-14 shadow bg-background backdrop-blur backdrop-saturate-150 z-50">
-          <div>I'm the header</div>
-          <ModeToggle />
-        </header>
+        <Header />
         <div className="relative mx-auto max-w-screen-xl px-4 py-10 h-[2000px]">
           <Outlet />
         </div>

@@ -16,7 +16,9 @@ const components: MDXComponents = {
     return <span className="font-black" {...props} />;
   },
   li(props) {
-    return <li className="before:content-['-'] before:mr-1" {...props} />;
+    return (
+      <li className="marker:text-primary list-disc list-inside" {...props} />
+    );
   },
 };
 
