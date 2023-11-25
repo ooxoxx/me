@@ -49,7 +49,12 @@ export function App() {
         <Links />
       </head>
       <body>
-        <Outlet />
+        <header className="sticky top-0 flex justify-around items-center h-14 shadow bg-[background]/50 backdrop-blur backdrop-saturate-150 z-50">
+          <div>I'm the header</div>
+        </header>
+        <div className="h-[2000px]">
+          <Outlet />
+        </div>
         <ScrollRestoration />
         <Scripts />
         <LiveReload />
